@@ -32,7 +32,7 @@ object SeekMath {
     }
 
     fun formatDelta(delta: Double): String {
-        val prefix = if (delta >= 0) "+" else ""
+        val prefix = if (delta >= 0) "+" else "-"
         return "$prefix${formatTime(kotlin.math.abs(delta))}"
     }
 }

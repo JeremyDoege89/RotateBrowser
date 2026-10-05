@@ -26,9 +26,11 @@ class SeekMathTest {
 
     @Test
     fun `delta scales with duration`() {
+        // duration=100, perWidth = coerceIn(100*0.2=20, 30, 300).coerceAtMost(100) = 30
         val d1 = SeekMath.delta(dx = 500f, widthPx = 1000, duration = 100.0)
-        assertEquals(10.0, d1, 0.01)
+        assertEquals(15.0, d1, 0.01)
 
+        // duration=600, perWidth = coerceIn(600*0.2=120, 30, 300).coerceAtMost(600) = 120
         val d2 = SeekMath.delta(dx = 500f, widthPx = 1000, duration = 600.0)
         assertEquals(60.0, d2, 0.01)
     }
@@ -41,8 +43,10 @@ class SeekMathTest {
 
     @Test
     fun `delta floors at 30 seconds per width`() {
+        // duration=60, perWidth = coerceIn(60*0.2=12, 30, 300).coerceAtMost(60) = 30
+        // full swipe = 1000/1000 * 30 = 30
         val d = SeekMath.delta(dx = 1000f, widthPx = 1000, duration = 60.0)
-        assertEquals(12.0, d, 0.01)
+        assertEquals(30.0, d, 0.01)
     }
 
     @Test

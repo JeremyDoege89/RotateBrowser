@@ -1,6 +1,5 @@
 [versions]
-agp = "9.4.0"
-kotlin = "2.1.20"
+agp = "9.4.1"
 webkit = "1.17.1"
 activity = "1.10.1"
 appcompat = "1.7.0"
@@ -20,4 +19,3 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
