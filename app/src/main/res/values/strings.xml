@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RotateBrowser</string>
+    <string name="url_hint">Search or enter URL</string>
+    <string name="content_description_back">Go back</string>
+    <string name="content_description_forward">Go forward</string>
+    <string name="content_description_reload">Reload</string>
+</resources>
